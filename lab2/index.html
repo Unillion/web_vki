@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Камушки</title>
+  
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/list.png">
+</head>
+<body>
+    <div class="root">
+        <p>Заполните обязательные поля, чтобы добавить данные в таблицу</p>
+
+        <form>
+            <label>
+                Тип камушков:
+                <select>
+                    <option>сапфиры</option>
+                    <option>алмазы</option>
+                    <option>рубины</option>
+                </select>
+            </label> <br/>
+            <label>
+                Год:
+                <input type="date">
+                <button>✅</button>
+            </label> <br/>
+            <label>
+                Количество:
+                <input type="text">
+                <button>❌</button>
+            </label> <br/>
+            <button>Отправить</button>
+        </form>
+
+        <table border="1" width="50%" cellpadding="4" cellspacing="0">
+            <caption>Добыча драгоценных камней</caption>
+            <tr>
+                <th rowspan="2">Камушек</th>
+                <th colspan="5">Год</th>
+            </tr>
+            <tr>
+                <th colspan="2">2010</th>
+                <th colspan="2">2012</th>
+                <th colspan="2">2014</th>
+            </tr>
+            <tr>
+                <td>сапфиры</td>
+                <td rowspan="2" colspan="3">1483</td>
+                <td>4532</td>
+                <td>6743</td>
+            </tr>
+            <tr>
+                <td>алмазы</td>
+                <td>3835</td>
+                <td>7482</td>
+            </tr>
+            <tr>
+                <td>рубины</td>
+                <td>683</td>
+                <td colspan="5">238</td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <p>Итого: много миллионов </p>
+
+                    <ol>
+                        <li>
+                            Итого по видам драгоценных камней: много тысяч
+                            <ul>
+                                <li>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BF%D1%84%D0%B8%D1%80">Сапфиров</a> немыслимое количество
+                                </li>
+                                <li>
+                                    Но <a href="https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D0%B1%D0%B8%D0%BD">рубинов</a> под конец всё же больше
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Итого по полудругоценным камням
+                            <ul>
+                                <li>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B7%D1%83%D0%BC%D1%80%D1%83%D0%B4"> Изумрудов</a> 0
+                                </li>
+                                <li>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BF%D0%B0%D0%B7"> Топазов</a> 0
+                                </li>
+                                <li>
+                                    <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B0%D0%BB"> Опалов </a> 0
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html> 
