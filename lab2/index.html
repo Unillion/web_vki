@@ -10,29 +10,31 @@
     <div class="root">
         <p>Заполните обязательные поля, чтобы добавить данные в таблицу</p>
 
-        <form>
-            <label>
-                Тип камушков:
-                <select>
-                    <option>сапфиры</option>
-                    <option>алмазы</option>
-                    <option>рубины</option>
-                </select>
-            </label> <br/>
-            <label>
-                Год:
-                <input type="date">
-                <button>✅</button>
-            </label> <br/>
-            <label>
-                Количество:
-                <input type="text">
-                <button>❌</button>
-            </label> <br/>
-            <button>Отправить</button>
-        </form>
+        <div class="form">
+            <form>
+                <label>
+                    Тип камушков:
+                    <select>
+                        <option>сапфиры</option>
+                        <option>алмазы</option>
+                        <option>рубины</option>
+                    </select>
+                </label> <br/>
+                <label>
+                    Год:
+                    <input type="date">
+                    <button>✅</button>
+                </label> <br/>
+                <label>
+                    Количество:
+                    <input type="text">
+                    <button>❌</button>
+                </label> <br/>
+                <button>Отправить</button>
+            </form>
+        </div>
 
-        <table border="1" width="50%" cellpadding="4" cellspacing="0">
+        <table border="1" width="50%" cellspacing="0">
             <caption>Добыча драгоценных камней</caption>
             <tr>
                 <th rowspan="2">Камушек</th>
