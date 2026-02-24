@@ -1,0 +1,110 @@
+body {
+    background-color: darkolivegreen;
+}
+
+.root {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_text {
+    color: white;
+}
+
+.functionals {
+    display: flex;
+}
+
+.functionals #delete {
+    background-color: red;
+    border: 5px solid red;
+    padding: none;
+}
+
+.functionals #delete:hover {
+    background-color: rgb(165, 1, 1);
+    border: 5px solid rgb(165, 1, 1);
+    color: whitesmoke;
+}
+
+.functionals #create {
+    background-color: gray;
+    border: 5px solid gray;
+    padding: none;
+}
+
+.functionals #create:hover {
+    background-color: rgb(71, 71, 71);
+    border: 5px solid rgb(71, 71, 71);
+    color: whitesmoke;
+}
+
+.list li{
+    list-style: none;
+    list-style-position: inside;
+    background-color: white;
+
+}
+
+.list li:hover {
+    background-color: lightgray;
+}
+
+.list #completed {
+    background-color: gray;
+    color: lightgray;
+    text-decoration: line-through;
+}
+
+.list li:hover button img {
+    filter: brightness(0) invert(1);
+}
+
+.list li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.list li button:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.list li input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 8px;
+}
+
+.list li input[type="checkbox"]:checked {
+    background-color: #999999;
+    border-color: #747474;
+}
+
+.list li input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.list li input[type="checkbox"]:hover {
+    border-color: #888888;
+}
