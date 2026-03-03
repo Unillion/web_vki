@@ -1,128 +1,169 @@
-body {
-    background-color: darkolivegreen;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.root {
-    text-align: center;
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: darkgreen;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.main_text {
-    color: white;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
 }
+
+
+.root {
+    width: 100%;
+    max-width: 700px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main_text {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 30px;
+}
+
 
 .functionals {
     display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
     flex-wrap: wrap;
 }
 
 .functionals input {
-    flex: 1 1 100px;
-    min-width: 100px;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    flex: 1 1 250px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
 }
 
 .functionals button {
-    flex: 0 1 auto;
-    padding: 8px 16px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    white-space: nowrap;
+    font-weight: bold;
 }
 
-.functionals #delete {
-    background-color: red;
-    border: 5px solid red;
-    padding: none;
+#create {
+    background: gray;
 }
 
-.functionals #delete:hover {
-    background-color: rgb(165, 1, 1);
-    border: 5px solid rgb(165, 1, 1);
-    color: whitesmoke;
+#create:hover {
+    background: #444;
+    color: white;
 }
 
-.functionals #create {
-    background-color: gray;
-    border: 5px solid gray;
-    padding: none;
+#delete {
+    background: #b63b34;
+    color: white;
 }
 
-.functionals #create:hover {
-    background-color: rgb(71, 71, 71);
-    border: 5px solid rgb(71, 71, 71);
-    color: whitesmoke;
+#delete:hover {
+    background: #7f1f1a;
 }
 
-.list li{
+
+.list {
     list-style: none;
-    list-style-position: inside;
-    background-color: white;
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
 
+.list li {
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 8px;
+    border-radius: 6px;
 }
 
 .list li:hover {
-    background-color: lightgray;
+    background: lightgray;
 }
 
-.list #completed {
-    background-color: gray;
+#completed {
+    background: gray;
     color: lightgray;
     text-decoration: line-through;
 }
 
-.list li:hover button img {
-    filter: brightness(0) invert(1);
+.list li label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.list li button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 2px 5px;
-    margin-left: 5px;
-    vertical-align: middle;
+.list li sub {
+    display: block;
+    font-size: 12px;
+    color: #bfbfbf;
+    margin-left: 28px;
 }
 
-.list li button:hover {
-    background-color: rgba(255, 0, 0, 0.3);
-    border-radius: 3px;
-}
-
-.list li input[type="checkbox"] {
-    appearance: none;
+.list input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    background-color: transparent;
     cursor: pointer;
-    vertical-align: middle;
-    position: relative;
-    margin-right: 8px;
 }
 
-.list li input[type="checkbox"]:checked {
-    background-color: #999999;
-    border-color: #747474;
+.list button {
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
 }
 
-.list li input[type="checkbox"]:checked::after {
-    content: "✓";
+.list button:hover {
+    color: red;
+}
+.list:empty::after {
+    content: "Не найдено ни одного дела";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 20px;
+}
+.bottom {
+    margin-top: auto;
 }
 
-.list li input[type="checkbox"]:hover {
-    border-color: #888888;
+.bottom hr {
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.5);
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    padding: 10px 0;
 }
