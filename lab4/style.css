@@ -140,6 +140,7 @@ body::before {
     height: 18px;
     cursor: pointer;
     flex-shrink: 0;
+    accent-color: gray;
 }
 
 .list button {
