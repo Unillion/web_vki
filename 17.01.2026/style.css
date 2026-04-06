@@ -1,0 +1,102 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    flex-wrap: wrap;
+    text-align: center; 
+    
+}
+
+.company-block {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.discount-label {
+    flex-wrap: wrap;
+    text-align: center;
+    background-image: url("https://thumbs.dreamstime.com/b/small-pond-garden-15222425.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    color: white;
+}
+
+.info-1 {
+    display: flex;
+    flex-direction: row;
+    background-color: lawngreen;
+    gap: 20px;
+    color: white;
+    padding: 20px;
+}
+
+.item-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+}
+
+.info-2 {
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item-2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1
+}
+.text-item2 {
+    background-color: gainsboro;
+}
+
+.upper-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+.mid-text {
+    color: #555;
+}
+
+.image-info2 {
+    background-image: url(data:image/png;base64,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);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-about {
+    background-color: aliceblue;
+}
+.about {
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 30%;
+    flex: 1;
+}
