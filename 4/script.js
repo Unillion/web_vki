@@ -13,7 +13,7 @@ function fixSum() {
     let b = +prompt("Второе число:", 2);
     
     if (isNaN(a) || isNaN(b)) {
-        alert("Введите числа!");
+        alert("не число");
         return;
     }
     
@@ -64,33 +64,32 @@ function runTask5() {
     }
 }
 
-function showPrimes() {
-    let n = prompt("Введите число", "10");
-    n = +n;
+function task6() {
+    let n = +prompt("Введите число", "10");
     
     if (isNaN(n) || n < 2) {
         alert("Введите число больше или равное 2");
         return;
     }
     
-    let primes = [];
+    let arr = [];
     
-    for (let num = 2; num <= n; num++) {
+    for (let i = 2; i <= n; i++) {
         let isPrime = true;
         
-        for (let divisor = 2; divisor < num; divisor++) {
-            if (num % divisor === 0) {
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
                 isPrime = false;
                 break;
             }
         }
         
         if (isPrime) {
-            primes.push(num);
+            arr.push(i);
         }
     }
     
-    alert("Простые числа от 2 до " + n + ": " + primes.join(", "));
-    document.getElementById("task6Result").innerHTML = "Простые числа от 2 до " + n + ": " + primes.join(", ");
+    alert("Простые числа от 2 до " + n + ": " + arr.join(", "));
+    document.getElementById("task6Result").innerHTML = "Простые числа от 2 до " + n + ": " + arr.join(", ");
 }
 
