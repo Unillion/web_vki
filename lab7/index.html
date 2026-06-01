@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <label>Стартовое число </label>
+    <input type="number" id="counter-input" value="5">
+    <button id="start-counter">Запустить counter</button>
+    
+    <br><br>
+    <label>Создать счётчик: </label>
+    <input type="number" id="create-input" value="10">
+    <button id="create-btn">Создать</button>
+    <button id="start-btn" disabled>Start</button>
+    <button id="pause-btn" disabled>Pause</button>
+    <button id="stop-btn" disabled>Stop</button>
+    
+    <p>Результат <span id="counter-display">--</span></p>
+    <p>Лог <span id="log-output" style="font-family: monospace;"></span></p>
+
+    <hr>
+
+    <button id="delay-test">alert через 3 сек</button>
+    <br><br>
+    <label>Счётчик через delay </label>
+    <input type="number" id="delay-counter-input" value="5">
+    <button id="delay-counter-btn">Запустить</button>
+    <p>Результат <span id="delay-counter-display">--</span></p>
+    <br>
+    <label>Имя пользователя гитхаб </label>
+    <input type="text" id="github-user" value="torvalds">
+    <button id="github-repo-btn">Показать первый репозиторий</button>
+
+    <hr>
+
+    <p>Кликните для поиска пользователя</p>
+    <button id="get-user-btn">Найти пользователя</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
