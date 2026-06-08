@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прогноз погоды</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="weather-widget">
+    <!-- Поиск -->
+    <div class="search-row">
+      <input type="text" id="cityInput" class="search-input" placeholder="Название города" autocomplete="off">
+      <button id="searchBtn" class="btn">Искать</button>
+    </div>
+
+    <!-- Название города и переключатель -->
+    <div class="header-row">
+      <h2 id="cityName">Москва</h2>
+      <div class="mode-switch">
+        <button id="dailyBtn" class="mode-btn active">Дни</button>
+        <button id="hourlyBtn" class="mode-btn">Часы</button>
+      </div>
+    </div>
+
+    <!-- Карусель -->
+    <div class="carousel">
+      <button id="prevBtn" class="arrow">←</button>
+      <div id="cardsContainer" class="cards"></div>
+      <button id="nextBtn" class="arrow">→</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
